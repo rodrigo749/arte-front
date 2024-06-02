@@ -16,15 +16,26 @@ const routes: Routes = [
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'add', component: AddTutorialComponent },
-  { path: 'home', component: HomeComponent },
+  
+  { path: 'home-admin', component: BoardAdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: '', redirectTo: 'register', pathMatch: 'full' }
+  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent,
+  children: [
+    {
+      path: 'add',
+      component: AddTutorialComponent,
+    },
+ 
+  ]
+} 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -13,7 +13,7 @@
         novalidate
       >
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="username">Usuário</label>
           <input
             type="text"
             class="form-control"
@@ -28,13 +28,13 @@
           @if (username.errors && f.submitted) {
           <div class="invalid-feedback">
             @if (username.errors['required']) {
-            <div>Username is required</div>
+            <div>Nome de Usuário é obrigatório</div>
             }
             @if (username.errors['minlength']) {
-            <div>Username must be at least 3 characters</div>
+            <div>O nome de usuário deve ter pelo menos 3 caracteres</div>
             }
             @if (username.errors['maxlength']) {
-            <div>Username must be at most 20 characters</div>
+            <div>O nome de usuário deve ter no máximo 20 caracteres</div>
             }
           </div>
           }
@@ -54,16 +54,16 @@
           @if (email.errors && f.submitted) {
           <div class="invalid-feedback">
             @if (email.errors['required']) {
-            <div>Email is required</div>
+            <div>Email é obrigatório</div>
             }
             @if (email.errors['email']) {
-            <div>Email must be a valid email address</div>
+            <div>O e-mail deve ser um endereço de e-mail válido</div>
             }
           </div>
           }
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Senha</label>
           <input
             type="password"
             class="form-control"
@@ -77,26 +77,26 @@
           @if (password.errors && f.submitted) {
           <div class="invalid-feedback">
             @if (password.errors['required']) {
-            <div>Password is required</div>
+            <div>Senha é requerida</div>
             }
             @if (password.errors['minlength']) {
-            <div>Password must be at least 6 characters</div>
+            <div>A senha deve ter pelo menos 6 caracteres</div>
             }
           </div>
           }
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">Sign Up</button>
+          <button class="btn btn-primary btn-block">Cadastrar</button>
         </div>
   
         @if (f.submitted && isSignUpFailed) {
         <div class="alert alert-warning">
-          Signup failed!<br />{{ errorMessage }}
+          Erro no Cadastro!<br />{{ errorMessage }}
         </div>
         }
       </form>
       } @else {
-      <div class="alert alert-success">Your registration is successful!</div>
+      <div class="alert alert-success">Seu cadastro foi realizado com sucesso!</div>
       }
     </div>
   </div>

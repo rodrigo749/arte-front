@@ -16,6 +16,10 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HeaderComponent } from './home/header/header.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -29,15 +33,22 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    //HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSlideToggleModule,
+    HomeModule
+    
   ],
-  providers: [httpInterceptorProviders],
-  bootstrap: [AppComponent]
+  //providers: [httpInterceptorProviders],
+  bootstrap: [AppComponent],
+  providers: [
+    provideAnimationsAsync()
+  ]
 })
 export class AppModule { }
