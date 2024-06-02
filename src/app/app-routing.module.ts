@@ -13,11 +13,8 @@ import { RegisterComponent } from './register/register.component';
 import { AddArteComponent } from './components/add-arte/add-arte.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: 'tutorials', pathMatch: 'full' },
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
-  //{ path: 'add', component: AddTutorialComponent },
-  
   { path: 'home-admin', component: BoardAdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -25,7 +22,7 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: HomeComponent,
   children: [
     { path: 'add-arte', component: AddArteComponent },
