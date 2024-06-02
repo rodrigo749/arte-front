@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
 import { Tutorial } from '../../models/tutorial.model';
 import { TutorialService } from '../../services/tutorial.service';
+
 
 @Component({
   selector: 'app-tutorials-list',
@@ -61,5 +62,9 @@ export class TutorialsListComponent implements OnInit {
       },
       error: (e) => console.error(e)
     });
+  }
+
+  exportToPdf() {
+    console.log('EXPORT PDF')
   }
 }

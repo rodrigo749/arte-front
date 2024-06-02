@@ -5,29 +5,26 @@
   <a href="home/tutorials" class="navbar-brand">Artesão App</a>
   
   <div class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a routerLink="tutorials" class="nav-link">Lista de Usuários</a>
-    </li>
-    
-    <!-- <li class="nav-item">
-      <a routerLink="home" class="nav-link">HOME</a>
-    </li> -->
-    <!-- <li class="nav-item">
-      <a routerLink="home-admin" class="nav-link">HOME ADMIN</a>
-    </li> -->
-    <li class="nav-item">
-      <a routerLink="add" class="nav-link">Add Artesão</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastros
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a routerLink="add" class="dropdown-item">Adicionar Artesão</a>
+        <a routerLink="add-arte" class="dropdown-item">Adicionar Obra de Arte</a>
+      </div>
     </li>
 
-    <li class="nav-item">
-      <a routerLink="add-arte" class="nav-link">Cadastra Arte</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Listas
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a routerLink="tutorials" class="dropdown-item">Lista de Artesões</a>
+        <a routerLink="tutorials" class="dropdown-item">Listas de Obras</a>
+      </div>
     </li>
-    <!-- <li class="nav-item">
-      <a routerLink="register" class="nav-link">Register</a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="login" class="nav-link">Login</a>
-    </li> -->
+    
   </div>
 </nav>
 

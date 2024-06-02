@@ -23,10 +23,18 @@ import { HomeModule } from './home/home.module';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 import { TituloModule } from './components/titulo/titulo.module';
 import { AddArteComponent } from './components/add-arte/add-arte.component';
+import { MenuItemComponent } from './layout/menu-item/menu-item.component';
+import { HeaderMaterialComponent } from './layout/header.component';
+import { PageHeaderComponent } from './layout/page-header.component';
+import { SalesComponent } from './layout/sales.component';
 
 
 @NgModule({
@@ -42,8 +50,11 @@ import { AddArteComponent } from './components/add-arte/add-arte.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    AddArteComponent
-    //HeaderComponent
+    AddArteComponent,
+    MenuItemComponent,
+    HeaderMaterialComponent,
+    PageHeaderComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +68,11 @@ import { AddArteComponent } from './components/add-arte/add-arte.component';
     FlexLayoutModule,
     MatDividerModule, 
     MatIconModule,
-    TituloModule
+    TituloModule,
+    MatListModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatMenuModule
     
   ],
   //providers: [httpInterceptorProviders],

@@ -35,9 +35,10 @@
         />
       </div>
 
-      <div class="form-group">
+      <div class="file-input">
         <label for="preco">Imagem</label>
         <input
+        type="file"
           class="form-control"
           id="image"
           required
@@ -46,7 +47,7 @@
         />
       </div>
   
-      <button (click)="saveTutorial()" class="btn btn-success">Salvar</button>
+      <button (click)="saveTutorial()" class="btn btn-success mt-3">Salvar</button>
       } @else {
       <h4>Arte adicionada com sucesso!</h4>
       <button class="btn btn-success" (click)="newTutorial()">Add Arte</button>
