@@ -1,19 +1,28 @@
 <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <a href="#" class="navbar-brand">Artesão App</a>
-    <div class="navbar-nav mr-auto">
-      <button  mat-icon-button color="accent" aria-label="Example icon button with a home icon">
+    <div class="navbar-nav ml-auto">
+      <button routerLink="home" mat-icon-button color="accent" aria-label="Icon Home">
         <mat-icon>home</mat-icon>
       </button>
-      <li class="nav-item">
+         <li class="nav-item">
+          <button routerLink="register"  mat-icon-button color="accent" aria-label="Icon Register">
+            <mat-icon>how_to_reg</mat-icon>
+          </button>
         <a routerLink="register" class="nav-link">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <a routerLink="login" class="nav-link">Login</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="register" class="nav-link">Logout</a>
-      </li>
+        <button routerLink="login" mat-icon-button color="accent" aria-label="Icon Login">
+          <mat-icon>login</mat-icon>
+        </button>
+      <a routerLink="login" class="nav-link">Login</a>
+    </li>
+    <li class="nav-item">
+      <button (click)="logout()"  mat-icon-button color="accent" aria-label="Icon Login">
+        <mat-icon>logout</mat-icon>
+      </button>
+      <a (click)="logout()" routerLink="login" class="nav-link">Logout</a>
+  </li>
     </div>
   </nav>
   <div class="container mt-3">

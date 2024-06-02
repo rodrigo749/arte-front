@@ -30,4 +30,5 @@ export class BoardUserComponent implements OnInit {
       }
     });
   }
+
 }

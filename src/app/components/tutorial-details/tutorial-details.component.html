@@ -1,6 +1,6 @@
 @if (viewMode){
   @if (currentTutorial.id){
-  <h4>Colaborador</h4>
+  <h4>Usuário</h4>
   <div>
     <label><strong>Nome:</strong></label> {{ currentTutorial.title }}
   </div>
@@ -10,17 +10,17 @@
   </div>
   <div>
     <label><strong>Status:</strong></label>
-    {{ currentTutorial.published ? "Published" : "Pending" }}
+    {{ currentTutorial.published ? "Publicado" : "Pendente" }}
   </div>
 
   <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
-    Edit
+    Editar
   </a>
-  } @else {<p>POr favor clique em um colaborador.</p>}
+  } @else {<p>Por favor clique em um Usuário.</p>}
 } @else {
   @if (currentTutorial.id) {
   <div class="edit-form">
-    <h4>Tutorial</h4>
+    <h4>Usuário</h4>
     <form>
       <div class="form-group">
         <label for="title">Nome</label>
@@ -45,7 +45,7 @@
 
       <div class="form-group">
         <label><strong>Status:</strong></label>
-        {{ currentTutorial.published ? "Published" : "Pending" }}
+        {{ currentTutorial.published ? "Publicado" : "Pendente" }}
       </div>
     </form>
 
@@ -56,19 +56,19 @@
     </button>
     } @else {
     <button class="badge badge-primary mr-2" (click)="updatePublished(true)">
-      Publish
+      Publicar
     </button>
     }
 
     <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-      Delete
+      Deletar
     </button>
 
     <button
       type="submit"
       class="badge badge-success mb-2"
       (click)="updateTutorial()">
-      Update
+      Atualizar
     </button>
     <p>{{ message }}</p>
   </div>
