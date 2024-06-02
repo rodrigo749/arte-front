@@ -1,0 +1,56 @@
+<div class="mt-3 mb-3">
+    <div class="submit-form">
+      @if (!submitted) {
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          required
+          [(ngModel)]="arte.nome"
+          name="nome"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <input
+          class="form-control"
+          id="descricao"
+          required
+          [(ngModel)]="arte.descricao"
+          name="descricao"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="preco">Preco</label>
+        <input
+          class="form-control"
+          id="preco"
+          required
+          [(ngModel)]="arte.preco"
+          name="preco"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="preco">Imagem</label>
+        <input
+          class="form-control"
+          id="image"
+          required
+          [(ngModel)]="arte.image"
+          name="image"
+        />
+      </div>
+  
+      <button (click)="saveTutorial()" class="btn btn-success">Salvar</button>
+      } @else {
+      <h4>Arte adicionada com sucesso!</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Add Arte</button>
+      }
+    </div>
+  </div>
+  

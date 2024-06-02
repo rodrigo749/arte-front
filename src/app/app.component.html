@@ -1,8 +1,8 @@
 <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Artesão App</a>
+    <a href="home/tutorials" class="navbar-brand">Artesão App</a>
     <div class="navbar-nav ml-auto">
-      <button routerLink="home" mat-icon-button color="accent" aria-label="Icon Home">
+      <button routerLink="home/tutorials" mat-icon-button color="accent" aria-label="Icon Home">
         <mat-icon>home</mat-icon>
       </button>
          <li class="nav-item">
@@ -12,10 +12,10 @@
         <a routerLink="register" class="nav-link">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <button routerLink="login" mat-icon-button color="accent" aria-label="Icon Login">
+        <button (click)="login()" routerLink="login" mat-icon-button color="accent" aria-label="Icon Login">
           <mat-icon>login</mat-icon>
         </button>
-      <a routerLink="login" class="nav-link">Login</a>
+      <a (click)="login()" routerLink="login" class="nav-link">Login</a>
     </li>
     <li class="nav-item">
       <button (click)="logout()"  mat-icon-button color="accent" aria-label="Icon Login">
