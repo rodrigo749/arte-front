@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -15,10 +16,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     ],
     declarations: [
         HeaderComponent,
+        FooterComponent,
 
     ],
     exports: [
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
     ]
 })
 export class HomeModule{

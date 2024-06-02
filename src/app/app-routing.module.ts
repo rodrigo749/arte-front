@@ -15,7 +15,7 @@ const routes: Routes = [
   //{ path: '', redirectTo: 'tutorials', pathMatch: 'full' },
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
-  { path: 'add', component: AddTutorialComponent },
+  //{ path: 'add', component: AddTutorialComponent },
   
   { path: 'home-admin', component: BoardAdminComponent },
   { path: 'login', component: LoginComponent },
@@ -27,11 +27,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
   { path: 'home', component: HomeComponent,
   children: [
-    {
-      path: 'add',
-      component: AddTutorialComponent,
-    },
- 
+    {path: 'add', component: AddTutorialComponent,},
+    { path: 'tutorials', component: TutorialsListComponent },
+    { path: 'tutorials/:id', component: TutorialDetailsComponent },
   ]
 } 
 ];
