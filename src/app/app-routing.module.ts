@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { AddArteComponent } from './components/add-arte/add-arte.component';
 
 const routes: Routes = [
   //{ path: '', redirectTo: 'tutorials', pathMatch: 'full' },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
   { path: 'home', component: HomeComponent,
   children: [
-    {path: 'add', component: AddTutorialComponent,},
+    { path: 'add-arte', component: AddArteComponent },
+    { path: 'add', component: AddTutorialComponent },
     { path: 'tutorials', component: TutorialsListComponent },
     { path: 'tutorials/:id', component: TutorialDetailsComponent },
   ]

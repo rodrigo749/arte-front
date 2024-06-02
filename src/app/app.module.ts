@@ -26,6 +26,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import { TituloModule } from './components/titulo/titulo.module';
+import { AddArteComponent } from './components/add-arte/add-arte.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { TituloModule } from './components/titulo/titulo.module';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
+    AddArteComponent
     //HeaderComponent
   ],
   imports: [
