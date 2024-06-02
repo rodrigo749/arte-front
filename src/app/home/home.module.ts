@@ -6,13 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FooterComponent } from './footer/footer.component';
 import { TituloModule } from '../components/titulo/titulo.module';
+import { MatIcon } from '@angular/material/icon';
 
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatIcon
 
     ],
     declarations: [

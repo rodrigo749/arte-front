@@ -26,6 +26,7 @@ export class RegisterComponent {
       next: data => {
         console.log(data);
         this.isSuccessful = true;
+        console.log('this.SUcesful', this.isSuccessful);
         this.isSignUpFailed = false;
 
       },

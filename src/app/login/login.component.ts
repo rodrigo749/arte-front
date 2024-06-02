@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
       if(this.isLoggedIn){
-        this.router.navigate(['home']);
+        this.router.navigate(['home/tutorials']);
       }
     }
   }
