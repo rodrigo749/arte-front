@@ -1,15 +1,15 @@
 <div class="list row">
-  <div class="col-md-8">
+  <div class="col-md-8 mt-3">
     <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"
-        placeholder="Search by title"
+        placeholder="Procurar pelo titulo"
         [(ngModel)]="title"
       />
       <div class="input-group-append">
         <button
-          class="btn btn-outline-secondary"
+          class="btn btn-success"
           type="button"
           (click)="searchTitle()"
         >
@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="col-md-6">
-    <h4>Tutorials List</h4>
+    <h4>Lista de Colaboradores</h4>
     <ul class="list-group">
       @for (tutorial of tutorials; track tutorial.id; let i = $index) {
       <li
@@ -33,7 +33,7 @@
     </ul>
 
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
-      Remove All
+      Remover todos
     </button>
   </div>
   <div class="col-md-6">

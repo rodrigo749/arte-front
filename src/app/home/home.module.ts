@@ -5,18 +5,19 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FooterComponent } from './footer/footer.component';
+import { TituloModule } from '../components/titulo/titulo.module';
 
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        MatSlideToggleModule,
+        MatSlideToggleModule
 
     ],
     declarations: [
         HeaderComponent,
-        FooterComponent,
+        FooterComponent
 
     ],
     exports: [

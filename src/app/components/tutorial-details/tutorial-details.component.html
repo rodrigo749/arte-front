@@ -1,11 +1,11 @@
 @if (viewMode){
   @if (currentTutorial.id){
-  <h4>Tutorial</h4>
+  <h4>Colaborador</h4>
   <div>
-    <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+    <label><strong>Nome:</strong></label> {{ currentTutorial.title }}
   </div>
   <div>
-    <label><strong>Description:</strong></label>
+    <label><strong>Cargo:</strong></label>
     {{ currentTutorial.description }}
   </div>
   <div>
@@ -16,14 +16,14 @@
   <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
     Edit
   </a>
-  } @else {<p>Please click on a Tutorial...</p>}
+  } @else {<p>POr favor clique em um colaborador.</p>}
 } @else {
   @if (currentTutorial.id) {
   <div class="edit-form">
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Nome</label>
         <input
           type="text"
           class="form-control"
@@ -33,7 +33,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Cargo</label>
         <input
           type="text"
           class="form-control"
@@ -72,5 +72,5 @@
     </button>
     <p>{{ message }}</p>
   </div>
-  } @else {<p>Cannot access this Tutorial...</p>}
+  } @else {<p>Você naõ pode acessar essa área</p>}
 }

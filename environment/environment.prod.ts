@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://manutencao-nucleotechcsl-com-br.umbler.net/api'
+    apiUrl: 'https://arte-front.vercel.app/api'
   };
