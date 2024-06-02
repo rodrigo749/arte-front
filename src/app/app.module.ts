@@ -21,6 +21,13 @@ import { HeaderComponent } from './home/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HomeModule } from './home/home.module';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatIconModule} from '@angular/material/icon';
+import { TituloModule } from './components/titulo/titulo.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +49,13 @@ import { HomeModule } from './home/home.module';
     FormsModule,
     HttpClientModule,
     MatSlideToggleModule,
-    HomeModule
+    HomeModule,
+    MatButtonModule,
+    MatDividerModule,
+    FlexLayoutModule,
+    MatDividerModule, 
+    MatIconModule,
+    TituloModule
     
   ],
   //providers: [httpInterceptorProviders],
