@@ -43,6 +43,9 @@ export class LoginComponent implements OnInit {
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
+        if(this.isLoggedIn){
+          this.router.navigate(['home/tutorials']);
+        }
         this.roles = this.storageService.getUser().roles;
 
         this.reloadPage();
