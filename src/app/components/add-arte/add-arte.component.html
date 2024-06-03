@@ -36,9 +36,9 @@
       </div>
 
       <div class="file-input">
-        <label for="preco">Imagem</label>
+        <label for="image">Imagem</label>
         <input
-        type="file"
+        type="text"
           class="form-control"
           id="image"
           required
@@ -47,10 +47,10 @@
         />
       </div>
   
-      <button (click)="saveTutorial()" class="btn btn-success mt-3">Salvar</button>
+      <button (click)="saveArte()" class="btn btn-success mt-3">Salvar</button>
       } @else {
       <h4>Arte adicionada com sucesso!</h4>
-      <button class="btn btn-success" (click)="newTutorial()">Add Arte</button>
+      <button class="btn btn-success" (click)="newArte()">Add Arte</button>
       }
     </div>
   </div>

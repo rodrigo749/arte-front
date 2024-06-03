@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Tutorial } from '../../models/tutorial.model';
 import { TutorialService } from '../../services/tutorial.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-tutorial',
@@ -15,7 +16,7 @@ export class AddTutorialComponent {
   };
   submitted = false;
 
-  constructor(private tutorialService: TutorialService) {}
+  constructor(private tutorialService: TutorialService, private router: Router) {}
 
   saveTutorial(): void {
     const data = {
@@ -27,6 +28,7 @@ export class AddTutorialComponent {
       next: (res) => {
         console.log(res);
         this.submitted = true;
+        this.router.navigate(['home/artes']);
       },
       error: (e) => console.error(e)
     });

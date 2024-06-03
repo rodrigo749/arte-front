@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AddArteComponent } from './components/add-arte/add-arte.component';
+import { ArteListComponent } from './components/arte-list/artes-list.component';
 
 const routes: Routes = [
   { path: 'tutorials', component: TutorialsListComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent,
   children: [
     { path: 'add-arte', component: AddArteComponent },
+    { path: 'artes', component: ArteListComponent },
     { path: 'add', component: AddTutorialComponent },
     { path: 'tutorials', component: TutorialsListComponent },
     { path: 'tutorials/:id', component: TutorialDetailsComponent },
