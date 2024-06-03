@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
 //const baseUrl = 'http://localhost:8080/api/tutorials'
-const baseUrl = 'https://api-render-teste.onrender.com/api/tutorials';
+const baseUrl = 'https://arte-api.onrender.com/api/tutorials';
 
 @Injectable({
   providedIn: 'root',
