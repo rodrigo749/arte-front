@@ -35,6 +35,7 @@ import { MenuItemComponent } from './layout/menu-item/menu-item.component';
 import { HeaderMaterialComponent } from './layout/header.component';
 import { PageHeaderComponent } from './layout/page-header.component';
 import { SalesComponent } from './layout/sales.component';
+import { provideOAuthClient } from 'angular-oauth2-oidc';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { SalesComponent } from './layout/sales.component';
   //providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideOAuthClient()
   ]
 })
 export class AppModule { }
