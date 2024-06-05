@@ -108,8 +108,11 @@ export class TutorialDetailsComponent implements OnInit {
       pdf.setFontSize(12);
       pdf.text('', 14, 22);
       pdf.save('myfile.pdf');
-
     })
-
   }
+
+  goBack() {
+    
+  }
+  
 }

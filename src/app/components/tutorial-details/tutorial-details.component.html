@@ -1,20 +1,20 @@
 @if (viewMode){
 @if (currentTutorial.id){
-<div id="portalDiv">
-
-  <h4>Usuário</h4>
-  <div>
-    <label><strong>Nome:</strong></label> {{ currentTutorial.title }}
+<div>
+  <div id="portalDiv">
+    <h4>Usuário</h4>
+    <div>
+      <label><strong>Nome:</strong></label> {{ currentTutorial.title }}
+    </div>
+    <div>
+      <label><strong>Cargo:</strong></label>
+      {{ currentTutorial.description }}
+    </div>
+    <div>
+      <label><strong>Status:</strong></label>
+      {{ currentTutorial.published ? "Publicado" : "Pendente" }}
+    </div>
   </div>
-  <div>
-    <label><strong>Cargo:</strong></label>
-    {{ currentTutorial.description }}
-  </div>
-  <div>
-    <label><strong>Status:</strong></label>
-    {{ currentTutorial.published ? "Publicado" : "Pendente" }}
-  </div>
-
   <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
     Editar
   </a>
@@ -58,8 +58,12 @@
     Deletar
   </button>
 
-  <button type="submit" class="badge badge-success mb-2" (click)="updateTutorial()">
+  <button type="submit" class="badge badge-success mr-2" (click)="updateTutorial()">
     Atualizar
+  </button>
+
+  <button type="submit" class="badge badge-info mb-2" [routerLink]="'/home/tutorials'">
+    Voltar
   </button>
 
   <p>{{ message }}</p>

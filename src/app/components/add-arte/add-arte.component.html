@@ -48,6 +48,8 @@
       </div>
   
       <button (click)="saveArte()" class="btn btn-success mt-3">Salvar</button>
+
+      <button class="btn btn-warning mt-3 ml-3" [routerLink]="'/home/tutorials'">Voltar</button>
       } @else {
       <h4>Arte adicionada com sucesso!</h4>
       <button class="btn btn-success" (click)="newArte()">Add Arte</button>
