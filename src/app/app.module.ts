@@ -73,9 +73,7 @@ import { provideOAuthClient } from 'angular-oauth2-oidc';
     MatListModule,
     MatExpansionModule,
     MatToolbarModule,
-    MatMenuModule,
-    
-    
+    MatMenuModule
   ],
   //providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
