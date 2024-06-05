@@ -110,9 +110,5 @@ export class TutorialDetailsComponent implements OnInit {
       pdf.save('myfile.pdf');
     })
   }
-
-  goBack() {
-    
-  }
   
 }
