@@ -8,6 +8,12 @@ digite os comandos:
 2º Instalar as dependencias do projeto: npm install
 3º Rodar o server com : ng serve --port 8081
 
+Para rodar localmente o projeto:
+- 1º clonar o repositório : git clone https://github.com/rodrigo749/arte-front.git
+- 2º Instalar as dependencias do projeto: npm install
+- 3º Rodar o server com : ng serve --port 8081
+- 4º Ir ao navegador e inserir o endereço : http://localhost:8081/
+
 Arte Application in that:
 - Each Arte has id, title, description, published status.
 - We can create, retrieve, update, delete Artes.
