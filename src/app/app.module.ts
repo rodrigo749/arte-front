@@ -80,7 +80,6 @@ import { provideOAuthClient } from 'angular-oauth2-oidc';
   //providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
   providers: [
-    httpInterceptorProviders,
     provideAnimationsAsync(),
     provideOAuthClient()
   ]
