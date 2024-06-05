@@ -1,5 +1,7 @@
 @if (viewMode){
-  @if (currentTutorial.id){
+@if (currentTutorial.id){
+<div id="portalDiv">
+
   <h4>Usuário</h4>
   <div>
     <label><strong>Nome:</strong></label> {{ currentTutorial.title }}
@@ -16,61 +18,51 @@
   <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
     Editar
   </a>
-  } @else {<p>Por favor clique em um Usuário.</p>}
+  <button class="m-3 btn btn-sm btn-primary" (click)="generatePDF()">
+    Exportar para PDF
+  </button>
+</div>
+} @else {<p>Por favor clique em um Usuário.</p>}
 } @else {
-  @if (currentTutorial.id) {
-  <div class="edit-form">
-    <h4>Usuário</h4>
-    <form>
-      <div class="form-group">
-        <label for="title">Nome</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="currentTutorial.title"
-          name="title"
-        />
-      </div>
-      <div class="form-group">
-        <label for="description">Cargo</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          [(ngModel)]="currentTutorial.description"
-          name="description"
-        />
-      </div>
+@if (currentTutorial.id) {
+<div class="edit-form">
+  <h4>Usuário</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Nome</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="currentTutorial.title" name="title" />
+    </div>
+    <div class="form-group">
+      <label for="description">Cargo</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="currentTutorial.description"
+        name="description" />
+    </div>
 
-      <div class="form-group">
-        <label><strong>Status:</strong></label>
-        {{ currentTutorial.published ? "Publicado" : "Pendente" }}
-      </div>
-    </form>
+    <div class="form-group">
+      <label><strong>Status:</strong></label>
+      {{ currentTutorial.published ? "Publicado" : "Pendente" }}
+    </div>
+  </form>
 
-    @if (currentTutorial.published) {
-    <button class="badge badge-primary mr-2"
-      (click)="updatePublished(false)" >
-      Despublicar
-    </button>
-    } @else {
-    <button class="badge badge-primary mr-2" (click)="updatePublished(true)">
-      Publicar
-    </button>
-    }
+  @if (currentTutorial.published) {
+  <button class="badge badge-primary mr-2" (click)="updatePublished(false)">
+    Despublicar
+  </button>
+  } @else {
+  <button class="badge badge-primary mr-2" (click)="updatePublished(true)">
+    Publicar
+  </button>
+  }
 
-    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-      Deletar
-    </button>
+  <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+    Deletar
+  </button>
 
-    <button
-      type="submit"
-      class="badge badge-success mb-2"
-      (click)="updateTutorial()">
-      Atualizar
-    </button>
-    <p>{{ message }}</p>
-  </div>
-  } @else {<p>Você naõ pode acessar essa área</p>}
+  <button type="submit" class="badge badge-success mb-2" (click)="updateTutorial()">
+    Atualizar
+  </button>
+
+  <p>{{ message }}</p>
+</div>
+} @else {<p>Você naõ pode acessar essa área</p>}
 }

@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tutorial } from '../../models/tutorial.model';
 import { TutorialService } from '../../services/tutorial.service';
+import jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-tutorial-details',
@@ -87,5 +89,27 @@ export class TutorialDetailsComponent implements OnInit {
       },
       error: (e) => console.error(e)
     });
+  }
+
+  generatePDF() {
+    console.log('generatePDF' );
+    const portalDiv = document.getElementById('portalDiv')!;
+
+    html2canvas(portalDiv, {scale:2}).then((canvas) => {
+      const pdf:any = new jspdf();
+      pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0,0,211,298);
+    
+      pdf.setProperties({
+        title: 'My Awesome PDF',
+        subject: 'PDF from hrml with angualar',
+        author: 'Rodrigo Neves Ottoboni Dias'
+      });
+
+      pdf.setFontSize(12);
+      pdf.text('', 14, 22);
+      pdf.save('myfile.pdf');
+
+    })
+
   }
 }

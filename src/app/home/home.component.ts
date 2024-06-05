@@ -31,9 +31,4 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  urlCadastroArte = '../../../assets/add.png';
-  urlListaArtes= '../../../assets/list.png';
-  urlRelatorio = '../../../assets/imgs/manut3.png';
-  urlListaEquipamentos = '../../../assets/imgs/manut2.png';
-  urlQmentum = '../../../assets/imgs/manut8.png';
 }
