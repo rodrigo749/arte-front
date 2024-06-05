@@ -25,6 +25,7 @@
     "angular-oauth2-oidc": "^17.0.2",
     "bootstrap": "^4.6.2",
     "dom-to-image": "^2.6.0",
+    "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.2",
     "moment": "^2.30.1",
